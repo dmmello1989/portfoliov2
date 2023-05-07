@@ -14,6 +14,7 @@ export const BackgroundBlob = styled.div`
   left: 0;
   display: flex;
   background-image: -webkit-linear-gradient(50deg, #bbbbbb 50%, #ffffff 50%);
+  z-index: -1;
 
   &::before {
     content: "";
@@ -44,5 +45,10 @@ export const TextBox = styled.div`
   padding: 32px;
 `;
 
+export const Title = styled.h3`
+  
+`;
+
 export const Text = styled.p`
+  text-align: justify;
 `;
