@@ -42,13 +42,21 @@ export const Container = styled.div`
 `;
 
 export const TextBox = styled.div`
-  padding: 32px;
+  padding: 0 64px 0 0;
+
+  & + & {
+    padding: 0 0 0 64px;
+  }
 `;
 
 export const Title = styled.h3`
-  
+  font-size: 1.5rem;
+  margin: 12px 0 32px;
+  margin-bottom: 32px;
 `;
 
 export const Text = styled.p`
   text-align: justify;
+  font: 300 1.125rem Bitter;
+  line-height: 28px;
 `;

@@ -9,6 +9,15 @@ const digitar = keyframes`
   }
 `;
 
+const digitarOut = keyframes`
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+`;
+
 const bounceImgHover = keyframes`
   0% {
     transform: translateY(0);
@@ -60,6 +69,7 @@ export const BadgeLabel = styled.span`
   font: 700 1rem "Open Sans";
   text-align: center;
   overflow: hidden;
+  animation: ${digitarOut} 0.3s steps(20, end) forwards;
 `;
 
 export const Badge = styled.div`
