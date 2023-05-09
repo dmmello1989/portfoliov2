@@ -6,7 +6,7 @@ export const SectionProjects = () => {
       <S.Container>
         <S.List>
           <S.Item>
-            oi
+            hello
           </S.Item>
         </S.List>
       </S.Container>
