@@ -15,7 +15,7 @@ export const Box = styled.div`
   padding: 16px 80px;
   color: #ffffff;
   border-radius: 8px;
-  /* background-color: #000000; */
+  background-color: #000000;
 `;
 
 export const Title = styled.h3`
@@ -56,7 +56,66 @@ export const Icon = styled.img`
 `;
 
 export const TextWrapper = styled.div`
+  --text: #ffffff;
+  --font-size: 1.25rem;
+  --duration: .44s;
+  --duration-line: .84s;
   text-align: left;
+  margin: 0;
+  color: var(--text);
+  font-size: var(--font-size);
+  line-height: calc(var(--font-size) + 5px);
+
+  .link {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+
+    div {
+      overflow: hidden;
+
+      &:first-child {
+        display: flex;
+        overflow: hidden;
+        text-shadow: 0 var(--font-size) 0 var(--text);
+      }
+
+      &:last-child {
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        left: 0;
+        bottom: -3px;
+        height: 5px;
+      }
+
+      span {
+        display: block;
+        backface-visibility: hidden;
+        font-style: normal;
+        transition: transform var(--duration) ease;
+        transform: translateY(var(--m, 0));
+
+        ${() => {
+          let styles = '';
+
+          for (let i = 1; i < 50; i++) {
+            styles += `
+              &:nth-child(${i}) {
+                transition-delay: ${i / 30}s;
+              }
+            `;
+          }
+
+          return styles;
+        }}
+      }
+    }
+
+    &:hover {
+      --m: calc((var(--font-size) + 5px) * -1);
+    }
+  }
 `;
 
 export const ItemTitle = styled.span`
@@ -64,71 +123,9 @@ export const ItemTitle = styled.span`
 `;
 
 export const ItemText = styled.a`
+  display: block;
   margin: 4px 0 0;
   font: 700 1.25rem "Open Sans";
+  line-height: calc(1.25rem + 5px);
   cursor: pointer;
-
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-
-  div {
-    overflow: hidden;
-
-    &:first-child {
-      display: flex;
-      overflow: hidden;
-      text-shadow: 0 1rem 0 #2b3044;
-    }
-
-    &:last-child {
-      position: absolute;
-      pointer-events: none;
-      right: 0;
-      left: 0;
-      bottom: -3px;
-      height: 5px;
-
-      svg {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 300%;
-        height: 5px;
-        fill: none;
-        stroke: #275EFE;
-        stroke-width: 1.5px;
-        stroke-linecap: round;
-        stroke-dasharray: 63.5px 128px;
-        stroke-dashoffset: var(63.5px, 190.25px);
-        transform: translateX(var(65.66%)) translateZ(0);
-        transition: transform var(.84s, 0s), stroke-dashoffset var(.84s, 0s);
-      }
-    }
-
-    span {
-      display: block;
-      backface-visibility: hidden;
-      font-style: normal;
-      transition: transform var(.44s) ease;
-      transform: translateY(var(--m, 0));
-      $i: 1;
-
-      @while $i < 12 {
-        &:nth-child(#{$i}) {
-            transition-delay: $i / 20 + s;
-        }
-        $i: $i + 1;
-      }
-    }
-  }
-
-  &:hover {
-    --m: calc(1rem * -1);
-    --line-d: .44s;
-    --line-x: 65.66%;
-    --line-offset: 63.5px;
-  }
 `;
