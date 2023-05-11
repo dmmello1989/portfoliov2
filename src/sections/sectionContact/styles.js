@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   background-color: #bbbbbb;
+  overflow: hidden;
 `;
 
 export const Container = styled.div`

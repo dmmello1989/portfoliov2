@@ -2,8 +2,6 @@ import { projectsData } from "./projectsData";
 import { ReactPhotoCollage } from "react-photo-collage";
 import * as S from "./styles";
 
-
-
 export const SectionProjects = () => {
   return (
     <S.Section>
@@ -24,13 +22,23 @@ export const SectionProjects = () => {
             };
 
             return (
-              <S.Item key={`${project.itemTitle}-${index}`} isReverse={isReverse}>
+              <S.Item data-aos="fade-up" key={`${project.itemTitle}-${index}`} isReverse={isReverse}>
                 <S.HalfSection>
-                  <S.ItemTitle>{project.itemTitle}</S.ItemTitle>
-                  <S.ItemText>
+                  <S.ItemTitle 
+                    data-aos={isReverse ? "fade-right" : "fade-left"}
+                  >
+                    {project.itemTitle}
+                  </S.ItemTitle>
+                  <S.ItemText
+                    data-aos-delay="300"
+                    data-aos={isReverse ? "fade-right" : "fade-left"}
+                  >
                     {project.itemText}
                   </S.ItemText>
-                  <S.ItemStack>
+                  <S.ItemStack
+                    data-aos-delay="450"
+                    data-aos={isReverse ? "fade-right" : "fade-left"}
+                  >
                     {project.itemStack}
                   </S.ItemStack>
                 </S.HalfSection>

@@ -16,6 +16,17 @@ import BTHRegister from "../../assets/projects/beTheHero/register.png"
 import BTHSplash from "../../assets/projects/beTheHero/splash.png"
 import BTHRegisterCase from "../../assets/projects/beTheHero/register-case.png"
 
+import HuddleDesktop from "../../assets/projects/frontend-mentor/huddle-landing-page/huddle-desktop.png";
+import HuddleMobile from "../../assets/projects/frontend-mentor/huddle-landing-page/huddle-mobile.png";
+
+import ComingSoonDesktop from "../../assets/projects/frontend-mentor/lp-coming-soon/landing-desktop.png";
+import ComingSoonMobile from "../../assets/projects/frontend-mentor/lp-coming-soon/landing-mobile.png";
+
+import GCGHard from "../../assets/projects/great-color-game/hard.png";
+import GCGEasy from "../../assets/projects/great-color-game/easy.png";
+import GCGRight from "../../assets/projects/great-color-game/right.png";
+import GCGWrong from "../../assets/projects/great-color-game/wrong.png";
+
 export const projectsData = [
   {
     itemTitle: "Ecoleta",
@@ -51,6 +62,35 @@ export const projectsData = [
       BTHRegister,
       BTHSplash,
       BTHRegisterCase
+    ]
+  },
+  {
+    itemTitle: "Huddle - Landing Page",
+    itemText: "A simple, modern and responsive landing page. Challenge from Frontend Masters",
+    itemStack: "HTML | CSS",
+    itemPhotos: [
+      HuddleDesktop,
+      HuddleMobile,
+    ]
+  },
+  {
+    itemTitle: "Base Apparel - Landing Page",
+    itemText: "A simple and responsive landing page with e-mail validation. Challenge from Frontend Masters",
+    itemStack: "HTML | CSS | JavaScript",
+    itemPhotos: [
+      ComingSoonDesktop,
+      ComingSoonMobile,
+    ]
+  },
+  {
+    itemTitle: "Great Color Game",
+    itemText: "Try your rgb color code knowledge with this fun game made in with JavaScript",
+    itemStack: "HTML | CSS | JavaScript",
+    itemPhotos: [
+      GCGHard,
+      GCGEasy,
+      GCGRight,
+      GCGWrong
     ]
   },
 ]

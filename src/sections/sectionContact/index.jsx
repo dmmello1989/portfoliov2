@@ -57,7 +57,7 @@ export const SectionContact = () => {
   return (
     <S.Section>
       <S.Container>
-        <S.Box>
+        <S.Box data-aos="fade-up">
           <S.Title>
             Contact
           </S.Title>
