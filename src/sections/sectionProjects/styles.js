@@ -11,6 +11,7 @@ export const Container = styled.div`
 `;
 
 export const List = styled.ul`
+  padding: 0;
   list-style: none;
   width: 100%;
 `;
@@ -20,8 +21,25 @@ export const Item = styled.li`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin: 80px auto;
+
+  ${props => props.isReverse && `
+    flex-direction: row-reverse;
+  `};
 `;
 
-export const Card = styled.div`
+export const HalfSection = styled.div`
+  width: calc(50% - 64px);
+`;
+
+export const ItemTitle = styled.h3`
+  
+`;
+
+export const ItemText = styled.p`
+  
+`;
+
+export const ItemStack = styled.span`
   
 `;
