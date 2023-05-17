@@ -18,10 +18,8 @@ export const SectionAboutMe = () => {
       };
     }, []);
 
-    console.log({active})
-  
   return (
-    <S.Section>
+    <S.Section id="section-about">
       <S.Container>
         <S.TextBox ref={ref}>
           <S.Title active={active}>Work experience</S.Title>

@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 export const SectionProjects = () => {
   return (
-    <S.Section>
+    <S.Section id="section-projects">
       <S.Container>
         <S.List>
           {projectsData.map((project, index) => {
@@ -30,17 +30,18 @@ export const SectionProjects = () => {
                     {project.itemTitle}
                   </S.ItemTitle>
                   <S.ItemText
-                    data-aos-delay="300"
+                    data-aos-delay="150"
                     data-aos={isReverse ? "fade-right" : "fade-left"}
                   >
                     {project.itemText}
                   </S.ItemText>
                   <S.ItemStack
-                    data-aos-delay="450"
+                    data-aos-delay="300"
                     data-aos={isReverse ? "fade-right" : "fade-left"}
                   >
                     {project.itemStack}
                   </S.ItemStack>
+                  <S.Link href={project.href} target="_blank">Go to Github repo</S.Link>
                 </S.HalfSection>
                 <S.HalfSection>
                   <ReactPhotoCollage {...setting} />

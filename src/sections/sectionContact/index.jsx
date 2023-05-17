@@ -55,7 +55,7 @@ export const SectionContact = () => {
   }, []);
 
   return (
-    <S.Section>
+    <S.Section id="section-contact">
       <S.Container>
         <S.Box data-aos="fade-up">
           <S.Title>

@@ -31,7 +31,8 @@ export const projectsData = [
   {
     itemTitle: "Ecoleta",
     itemText: "Ecoleta brings together companies and entities that collect all sorts of recyclable waste and people who need to dispose of their waste in an ecological way.",
-    itemStack: "Node.js | Expo | React.js | React Native | TypeScript",
+    itemStack: "Node.js | Expo | React.js | React Native | TypeScript | Leaflet",
+    href: "https://github.com/dmmello1989/ecoleta",
     itemPhotos: [
       EcoletaHomeDesktop,
       EcoletaDesktopCrop,
@@ -44,6 +45,7 @@ export const projectsData = [
     itemTitle: "SpotCode",
     itemText: "A simplistic clone of Spotify, this is a fullstack project made with Ruby and Rails on the backend and React with Bulma for the frontend.",
     itemStack: "Ruby on Rails | SQLite3 | React.js | Bulma | styled-components",
+    href: "https://github.com/dmmello1989/spotcode",
     itemPhotos: [
       SpotcodeDashboard,
       SpotcodeSearch,
@@ -56,6 +58,7 @@ export const projectsData = [
     itemTitle: "Be The Hero",
     itemText: "This is a crowdfunding app with basic CRUD functionalities, a fullstack project with handfuls of JavaScript and its libraries.",
     itemStack: "React.js | React Native | Expo | Node.js | Express | SQLite3",
+    href: "https://github.com/dmmello1989/beTheHero",
     itemPhotos: [
       BTHLogin,
       BTHList,
@@ -68,6 +71,7 @@ export const projectsData = [
     itemTitle: "Huddle - Landing Page",
     itemText: "A simple, modern and responsive landing page. Challenge from Frontend Masters",
     itemStack: "HTML | CSS",
+    href: "https://github.com/dmmello1989/huddle-landing-page",
     itemPhotos: [
       HuddleDesktop,
       HuddleMobile,
@@ -77,6 +81,7 @@ export const projectsData = [
     itemTitle: "Base Apparel - Landing Page",
     itemText: "A simple and responsive landing page with e-mail validation. Challenge from Frontend Masters",
     itemStack: "HTML | CSS | JavaScript",
+    href: "https://github.com/dmmello1989/base-apparel-coming-soon",
     itemPhotos: [
       ComingSoonDesktop,
       ComingSoonMobile,
@@ -86,6 +91,7 @@ export const projectsData = [
     itemTitle: "Great Color Game",
     itemText: "Try your rgb color code knowledge with this fun game made in with JavaScript",
     itemStack: "HTML | CSS | JavaScript",
+    href: "https://github.com/dmmello1989/great-color-game",
     itemPhotos: [
       GCGHard,
       GCGEasy,

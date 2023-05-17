@@ -6,11 +6,13 @@ import { SectionAboutMe } from "./sections/sectionAboutMe"
 import { SectionBadges } from "./sections/sectionBadges"
 import { SectionContact } from "./sections/sectionContact"
 import { SectionHero } from "./sections/sectionHero"
-import { SectionProjects } from "./sections/sectionProjects"
+// import { SectionProjects } from "./sections/sectionProjects"
 
 function App() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      startEvent: 'load'
+    });
   }, []);
 
   return (
@@ -18,7 +20,7 @@ function App() {
       <Menu />
       <SectionHero />
       <SectionBadges />
-      <SectionProjects />
+      {/* <SectionProjects /> */}
       <SectionAboutMe />
       <SectionContact />
     </>

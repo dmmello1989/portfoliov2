@@ -39,12 +39,20 @@
   min-height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 375px;
   min-height: 100vh;
   margin: 0;
   display: flex;
   place-items: center;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 button {

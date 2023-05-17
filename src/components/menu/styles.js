@@ -36,7 +36,9 @@ export const Link = styled.a`
   margin: 0 8px;
   padding: 8px 16px;
   cursor: pointer;
+  color: #2c1a16;
   overflow: hidden;
+  text-decoration: none;
   transition: all 0.5s ease;
 
   &:hover {

@@ -53,6 +53,12 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1050px;
   margin: 32px auto;
+
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+    padding: 0 16px;
+    gap: 16px 0;
+  }
 `;
 
 export const BadgeImg = styled.img`
@@ -61,6 +67,10 @@ export const BadgeImg = styled.img`
   margin-bottom: 8px;
   filter: grayscale(50%);
   animation: ${bounceImgOut} 0.3s ease-in-out;
+
+  @media (max-width: 1023px) {
+    width: 74px;
+  }
 `;
 
 export const BadgeLabel = styled.span`

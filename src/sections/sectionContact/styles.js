@@ -1,28 +1,48 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+  height: 600px;
+  margin-top: -32px;
   background-color: #bbbbbb;
   overflow: hidden;
 `;
 
 export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
-  padding: 64px 32px;
+  padding: 0 32px;
+
+  @media (max-width: 1023px) {
+    padding: 0 8px;
+  }
 `;
 
 export const Box = styled.div`
+  width: 100%;
   padding: 16px 80px;
   color: #ffffff;
   border-radius: 8px;
   background-color: #000000;
+
+  @media (max-width: 1023px) {
+    padding: 16px 20px;
+  }
 `;
 
 export const Title = styled.h3`
   margin: 32px 0 50px;
   font: 700 3rem "Open Sans";
   text-align: center;
+
+  @media (max-width: 1023px) {
+    margin: 16px 0 32px;
+    font: 700 2.5rem "Open Sans";
+  }
 `;
 
 export const List = styled.ul`
@@ -30,6 +50,10 @@ export const List = styled.ul`
   justify-content: space-between;
   padding: 0;
   list-style: none;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
 `;
 
 export const Item = styled.li`

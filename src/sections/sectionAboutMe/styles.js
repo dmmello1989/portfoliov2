@@ -2,14 +2,15 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   position: relative;
-  min-height: calc(100vh - 128px);
-  padding: 16px 0;
+  min-height: 300px;
+  margin: 32px 0;
+  padding: 72px 0 32px;
   overflow: hidden;
 `;
 
 export const BackgroundBlob = styled.div`
   position: absolute;
-  top: 0;
+  top: 32px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -40,6 +41,10 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
 `;
 
 export const TextBox = styled.div`
@@ -54,6 +59,7 @@ export const Title = styled.h3`
   font-size: 1.5rem;
   margin: 12px 0 32px;
   margin-bottom: 32px;
+  opacity: 0;
   transform: translateX(-150%);
   transition: opacity 0.5s ease-in-out, transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
 
@@ -71,6 +77,7 @@ export const Text = styled.p`
   text-align: justify;
   font: 300 1.125rem Bitter;
   line-height: 28px;
+  opacity: 0;
   transform: translateX(-150%);
   transition: opacity 0.5s ease-in-out, transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1);
   
