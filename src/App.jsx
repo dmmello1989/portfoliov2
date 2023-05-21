@@ -2,11 +2,11 @@ import { useEffect } from "react"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Menu } from "./components/menu"
-import { SectionAboutMe } from "./sections/sectionAboutMe"
-import { SectionBadges } from "./sections/sectionBadges"
-import { SectionContact } from "./sections/sectionContact"
 import { SectionHero } from "./sections/sectionHero"
-// import { SectionProjects } from "./sections/sectionProjects"
+import { SectionBadges } from "./sections/sectionBadges"
+import { SectionProjects } from "./sections/sectionProjects"
+import { SectionAboutMe } from "./sections/sectionAboutMe"
+import { SectionContact } from "./sections/sectionContact"
 
 function App() {
   useEffect(() => {
@@ -20,7 +20,7 @@ function App() {
       <Menu />
       <SectionHero />
       <SectionBadges />
-      {/* <SectionProjects /> */}
+      <SectionProjects />
       <SectionAboutMe />
       <SectionContact />
     </>

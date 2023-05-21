@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import * as pallette from "../../styledVariables";
 
 export const Section = styled.section`
   display: flex;
   align-items: center;
   max-width: 100%;
   height: calc(100vh - 65px);
+  background-color: ${pallette.colorLight};
 `;
 
 export const Container = styled.div`
@@ -45,7 +47,7 @@ export const ImageFilter = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #2c1a16;
+  background-color: ${pallette.colorEclipse};
   mix-blend-mode: multiply;
   opacity: 0.5;
 `;
@@ -63,6 +65,7 @@ export const Name = styled.h1`
   margin: 0;
   font: 300 6rem "Open Sans";
   line-height: 5rem;
+  color: ${pallette.colorEclipse};
 
   > strong {
     font-weight: 800;
@@ -80,9 +83,9 @@ export const Name = styled.h1`
 
 export const Title = styled.h2`
   padding: 8px 16px;
-  color: #ffffff;
+  color: ${pallette.colorLight};
   font: 700 2rem "Open Sans";
-  background-color: #2c1a16;
+  background-color: ${pallette.colorEclipse};
   
   @media (max-width: 1023px) {
     font: 700 1.75rem "Open Sans";

@@ -1,7 +1,19 @@
 import styled from "styled-components";
+import * as pallette from "../../styledVariables";
 
 export const Header = styled.header`
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  color: ${pallette.colorEclipse};
+  background-color: ${pallette.colorLight};
+  transition: all 0.3s ease;
+
+  ${props => props.isSticking && `
+    color: ${pallette.colorLight};
+    background-color: ${pallette.colorEclipse};
+  `};
 `;
 
 export const Container = styled.div`
@@ -18,6 +30,7 @@ export const Name = styled.button`
   font: 300 1.5rem "Open Sans";
   padding: 0;
   border: none;
+  color: inherit;
   background-color: transparent;
 
   > strong {
@@ -36,13 +49,13 @@ export const Link = styled.a`
   margin: 0 8px;
   padding: 8px 16px;
   cursor: pointer;
-  color: #2c1a16;
+  color: inherit;
   overflow: hidden;
   text-decoration: none;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 
   &:hover {
-    color: #ffffff;
+    color: ${props => props.isSticking ? pallette.colorEclipse : pallette.colorLight};
   }
 
   &:hover::before {
@@ -56,9 +69,9 @@ export const Link = styled.a`
     left: 0;
     width: 130%;
     height: 32px;
-    background-color: #2c1a16;
+    background-color: ${props => props.isSticking ? pallette.colorLight : pallette.colorEclipse};
     transform: translate(-110%, 0) skew(-30deg);
-    transition: 0.5s;
+    transition: 0.3s;
     z-index: -1;
   }
 `;

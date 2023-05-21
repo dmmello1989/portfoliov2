@@ -41,7 +41,13 @@ export const SectionProjects = () => {
                   >
                     {project.itemStack}
                   </S.ItemStack>
-                  <S.Link href={project.href} target="_blank">Go to Github repo</S.Link>
+                  <S.Link
+                    data-aos-delay="350"
+                    data-aos={isReverse ? "fade-up" : "fade-bottom"}
+                    href={project.href} target="_blank"
+                  >
+                    Go to Github repo
+                  </S.Link>
                 </S.HalfSection>
                 <S.HalfSection>
                   <ReactPhotoCollage {...setting} />

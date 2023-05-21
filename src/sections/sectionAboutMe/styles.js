@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import * as pallette from "../../styledVariables";
+
+const slideBg = keyframes`
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: 50%;
+  }
+`;
 
 export const Section = styled.section`
   position: relative;
@@ -8,30 +18,27 @@ export const Section = styled.section`
   overflow: hidden;
 `;
 
-export const BackgroundBlob = styled.div`
+export const SecondaryBackground = styled.div`
   position: absolute;
   top: 32px;
   right: 0;
   bottom: 0;
   left: 0;
   display: flex;
-  background-image: -webkit-linear-gradient(50deg, #bbbbbb 50%, #ffffff 50%);
+  /* background-image: -webkit-linear-gradient(360deg, ${pallette.colorEclipse} 50%, ${pallette.colorLight} 50%); */
   z-index: -1;
 
   &::before {
-    content: "";
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 50%;
-    min-height: 100%;
-    border-radius: 0 0 30px 0;
-    background-color: #ffffff;
-  }
-
-  &::after {
-    content: "";
-    width: 50%;
-    min-height: 100%;
-    border-radius: 30px 0 0 0;
-    background-color: #bbbbbb;
+    height: 100%;
+    background: ${pallette.colorEclipse};
+    /* animation: ${slideBg} 5s linear; */
   }
 `;
 
@@ -49,9 +56,11 @@ export const Container = styled.div`
 
 export const TextBox = styled.div`
   padding: 0 64px 0 0;
+  color: ${pallette.colorLight};
 
   & + & {
     padding: 0 0 0 64px;
+    color: ${pallette.colorEclipse};
   }
 `;
 

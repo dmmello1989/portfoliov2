@@ -7,21 +7,28 @@ export const SectionAboutMe = () => {
     const ref = useRef(null);
   
     useEffect(() => {
+      const observerOptions = {
+        // root: null,
+        // rootMargin: '0px',
+        threshold: 0.5
+      };
+
       const observer = new IntersectionObserver(([entry]) => {
         setActive(entry.isIntersecting);
-      }, { threshold: 0.5 });
-  
-      observer.observe(ref.current);
+      }, observerOptions);
+
+      const currentRef = ref.current;
+      observer.observe(currentRef);
   
       return () => {
-        observer.unobserve(ref.current);
+        observer.unobserve(currentRef);
       };
     }, []);
 
   return (
     <S.Section id="section-about">
-      <S.Container>
-        <S.TextBox ref={ref}>
+      <S.Container ref={ref}>
+        <S.TextBox>
           <S.Title active={active}>Work experience</S.Title>
           <S.Text active={active}>
             I am an experienced frontend developer proficient in React.js, Redux, Next.js and styled-components. I have four years of experience building and maintaining an online educational platform that helped thousands of users to achieve their goals, and developing landing pages that helped drive traffic and improve user engagement.
@@ -42,7 +49,7 @@ export const SectionAboutMe = () => {
           </S.Text>
         </S.TextBox>
       </S.Container>
-      <S.BackgroundBlob />
+      <S.SecondaryBackground active={active} />
     </S.Section>
   )
 }

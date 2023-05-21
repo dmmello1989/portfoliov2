@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as pallette from "../../styledVariables";
 
 export const Section = styled.section`
   padding: 32px 0;
@@ -35,6 +36,10 @@ export const Item = styled.li`
 export const HalfSection = styled.div`
   width: calc(50% - 64px);
 
+  img {
+    max-width: calc(100% - 64px);
+  }
+
   @media (max-width: 1023px) {
     width: 100%;
   }
@@ -42,7 +47,7 @@ export const HalfSection = styled.div`
 
 export const ItemTitle = styled.h3`
   margin: 0;
-  color: #2c1a16;
+  color: ${pallette.colorEclipse};
   font: 700 1.5rem "Open Sans";
 `;
 
@@ -62,14 +67,14 @@ export const Link = styled.a`
   margin: 32px 0 0;
   padding: 8px 16px;
   cursor: pointer;
-  color: #2c1a16;
-  border: 1px solid #2c1a16;
+  color: ${pallette.colorEclipse};
+  border: 1px solid ${pallette.colorEclipse};
   overflow: hidden;
   text-decoration: none;
   transition: all 0.5s ease;
 
   &:hover {
-    color: #ffffff;
+    color: ${pallette.colorLight};
   }
 
   &:hover::before {
@@ -83,7 +88,7 @@ export const Link = styled.a`
     left: 0;
     width: 130%;
     height: 32px;
-    background-color: #2c1a16;
+    background-color: ${pallette.colorEclipse};
     transform: translate(-110%, 0) skew(-30deg);
     transition: 0.5s;
     z-index: -1;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import * as pallette from "../../styledVariables";
 
 export const Section = styled.section`
   height: 600px;
   margin-top: -32px;
-  background-color: #bbbbbb;
+  background-color: ${pallette.colorLight};
   overflow: hidden;
 `;
 
@@ -25,9 +26,9 @@ export const Container = styled.div`
 export const Box = styled.div`
   width: 100%;
   padding: 16px 80px;
-  color: #ffffff;
+  color: ${pallette.colorLight};
   border-radius: 8px;
-  background-color: #000000;
+  background-color:${pallette.colorEclipse};
 
   @media (max-width: 1023px) {
     padding: 16px 20px;
@@ -72,7 +73,7 @@ export const IconWrapper = styled.div`
   margin-right: 16px;
   padding: 10px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: ${pallette.colorLight};
   cursor: pointer;
 `;
 
@@ -81,7 +82,7 @@ export const Icon = styled.img`
 `;
 
 export const TextWrapper = styled.div`
-  --text: #ffffff;
+  --text: ${pallette.colorLight};
   --font-size: 1.25rem;
   --duration: .44s;
   --duration-line: .84s;
